@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pergunta sobre bolo</title>
+    <style>
+        .button-disabled {
+            pointer-events: none;
+            color: grey;
+            position: relative;
+            animation: shake 0.5s infinite alternate;
+        }
+
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(10px); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Você aceita um bolo?</h1>
+    <button id="yesButton">Sim</button>
+    <button id="noButton" class="button-disabled">Não</button>
+
+    <script>
+        document.getElementById('yesButton').addEventListener('click', function() {
+            alert('Você aceitou o bolo!');
+        });
+
+        document.getElementById('noButton').addEventListener('click', function() {
+            alert('Esta opção não está disponível.');
+        });
+    </script>
+</body>
+</html>
